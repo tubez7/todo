@@ -12,7 +12,7 @@ function App() { //return value injects into the <div id="root"></div> on index.
 
   return (
     <div className="App">
-      <h1>Richard and Harrison's To-Do List </h1>  {/* could be extracted into its own component */}
+      <h1>Richard and Harrison's To-Do List</h1>  {/* could be extracted into its own component */}
 
       <fieldset> {/* could be extracted into its own component */}
         <ul>
