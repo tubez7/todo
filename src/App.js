@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "./Components/Header.js";
 import TodoList from "./Components/TodoList";
 import TodoAdder from "./Components/TodoAdder";
+import Form from "./Components/Form";
 
 function App() {
   //return value injects into the <div id="root"></div> on index.html
@@ -12,30 +13,19 @@ function App() {
     "get confused",
     "push to git",
   ]);
-
+  const [newTodo, setNewTodo] = useState("");
   console.log(toDos); //confirms toDos array has been updated
 
   return (
     <div className="App">
       <Header />
       {/* extracted into  its own component */}
-      <TodoList />
-      <TodoAdder />
-
-      <input id="add-todo" placeholder="Enter a to-do here"></input>
-      <button
-        onClick={() => {
-          console.log("clicked"); //confirms successful click
-          setToDos((currentToDos) => {
-            //setToDos function sets the new state of toDos array
-            const newToDos = [...currentToDos]; //must not mutate the current state so spread value into new state variable.
-            newToDos.push("hello");
-            return newToDos; //return value of setToDos = new state of toDos
-          });
-        }}
-      >
-        Add To-do
-      </button>
+      <Form
+        toDos={toDos}
+        setNewTodo={setNewTodo}
+        newTodo={newTodo}
+        setToDos={setToDos}
+      />
       {/* button component could be extracted */}
     </div>
   );
