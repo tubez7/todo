@@ -36,7 +36,7 @@ function App() { //return value injects into the <div id="root"></div> on index.
           });
         }}
       >
-        Add Todo
+        Add To-do
       </button> {/* button component could be extracted */}
     </div>
   );
