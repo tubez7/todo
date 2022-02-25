@@ -1,9 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 import Header from "./Components/Header.js";
-import TodoList from "./Components/TodoList";
-import TodoAdder from "./Components/TodoAdder";
 import Form from "./Components/Form";
+import Button from "./Components/Button"
 
 function App() {
   //return value injects into the <div id="root"></div> on index.html
@@ -27,6 +26,9 @@ function App() {
         setToDos={setToDos}
       />
       {/* button component could be extracted */}
+      <Button setNewTodo={setNewTodo}
+        newTodo={newTodo}
+        setToDos={setToDos}/>
     </div>
   );
 }

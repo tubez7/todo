@@ -1,14 +1,9 @@
 export default function Form({ toDos, setNewTodo, newTodo, setToDos }) {
   return (
     <section>
-      <form
-      // onSubmit={() => {
-      //   setNewTodo(currentToDos);
-      //   const newToDo = [newToDo, ...currentToDos];
-      // }}
-      >
+      <form>
         <fieldset>
-          {/* could be extracted into its own component */}
+          
           <ul>
             {toDos.map((toDo, index) => {
               return (
